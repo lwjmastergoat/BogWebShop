@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BogWebShop", "BogWebShop\BogWebShop.csproj", "{B7C64888-226A-4178-BDFD-1F9417E170DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{45969FA0-C953-4B1C-84DE-4A4C03A2082D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{B7C64888-226A-4178-BDFD-1F9417E170DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7C64888-226A-4178-BDFD-1F9417E170DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7C64888-226A-4178-BDFD-1F9417E170DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45969FA0-C953-4B1C-84DE-4A4C03A2082D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45969FA0-C953-4B1C-84DE-4A4C03A2082D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45969FA0-C953-4B1C-84DE-4A4C03A2082D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45969FA0-C953-4B1C-84DE-4A4C03A2082D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08EBA6BA-A64F-4D36-84D1-1735D9431B9E}
 	EndGlobalSection
 EndGlobal
