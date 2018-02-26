@@ -90,10 +90,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Css\CMS\Bootstrap\bootstrap-grid.css" />
+    <Content Include="Css\CMS\Bootstrap\bootstrap-grid.min.css" />
+    <Content Include="Css\CMS\Bootstrap\bootstrap-reboot.css" />
+    <Content Include="Css\CMS\Bootstrap\bootstrap-reboot.min.css" />
+    <Content Include="Css\CMS\Bootstrap\bootstrap.css" />
+    <Content Include="Css\CMS\Bootstrap\bootstrap.min.css" />
+    <Content Include="Css\CMS\CMSCSSMAIN.css" />
     <Content Include="Css\font-awesome-4.7.0\css\font-awesome.css" />
     <Content Include="Css\font-awesome-4.7.0\css\font-awesome.min.css" />
     <Content Include="Css\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
     <Content Include="Css\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Css\CMS\LoginStyleAdmin.css" />
     <Content Include="Css\mainstyle.css">
       <DependentUpon>mainstyle.scss</DependentUpon>
     </Content>
@@ -101,11 +109,14 @@
       <DependentUpon>mainstyle.css</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
+    <Content Include="Images\CMS\cms1.png" />
+    <Content Include="Images\CMS\LOGIN.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\CMS\CMSAreaRegistration.cs" />
+    <Compile Include="Areas\CMS\Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -120,6 +131,7 @@
     <Content Include="packages.config" />
     <Content Include="Css\mainstyle.scss" />
     <Content Include="Areas\CMS\Views\web.config" />
+    <Content Include="Areas\CMS\Views\Home\Index.cshtml" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -159,6 +171,15 @@
     <Content Include="Css\font-awesome-4.7.0\scss\_screen-reader.scss" />
     <Content Include="Css\font-awesome-4.7.0\scss\_stacked.scss" />
     <Content Include="Css\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Views\Shared\_LoginStyleAdmin.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Css\CMS\Bootstrap\bootstrap-grid.css.map" />
+    <Content Include="Css\CMS\Bootstrap\bootstrap-grid.min.css.map" />
+    <Content Include="Css\CMS\Bootstrap\bootstrap-reboot.css.map" />
+    <Content Include="Css\CMS\Bootstrap\bootstrap-reboot.min.css.map" />
+    <Content Include="Css\CMS\Bootstrap\bootstrap.css.map" />
+    <Content Include="Css\CMS\Bootstrap\bootstrap.min.css.map" />
+    <Content Include="Views\Shared\_CMSLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -168,13 +189,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\CMS\Controllers\" />
     <Folder Include="Areas\CMS\Models\" />
     <Folder Include="Areas\CMS\Views\Shared\" />
-    <Folder Include="Images\" />
     <Folder Include="JavaScripts\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Login\" />
     <Folder Include="Views\Product\" />
     <Folder Include="Views\Users\" />
   </ItemGroup>
