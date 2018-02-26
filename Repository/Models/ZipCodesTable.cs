@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Repository.Models
 {
-    class ProduktTable
+    public class ZipCodesTable
     {
+        public int ZipCode { get; set; }
+        public string City { get; set; }
     }
 }
