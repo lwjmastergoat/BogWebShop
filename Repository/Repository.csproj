@@ -43,6 +43,11 @@
     <Compile Include="DDMF\AutoFac.cs" />
     <Compile Include="DDMF\Conn.cs" />
     <Compile Include="DDMF\Mapper.cs" />
+    <Compile Include="Factories\AuthorFactory.cs" />
+    <Compile Include="Factories\CategoryFactory.cs" />
+    <Compile Include="Factories\ContactInformationFactory.cs" />
+    <Compile Include="Factories\OrderDetailsFactory.cs" />
+    <Compile Include="Factories\OrderFactory.cs" />
     <Compile Include="Factories\ProductFactory.cs" />
     <Compile Include="Models\AuthorTable.cs" />
     <Compile Include="Models\CategoryTable.cs" />

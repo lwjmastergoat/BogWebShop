@@ -15,7 +15,13 @@ namespace BogWebShop.Controllers
         public ActionResult Index()
         {
             
-            return View();
+            return View(pf.GetAll());
         }
+        public ActionResult Details(int ID)
+        {
+
+            return View(pf.Get(ID));
+        }
+        
     }
 }
