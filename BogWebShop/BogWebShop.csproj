@@ -101,6 +101,7 @@
       <DependentUpon>mainstyle.css</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
+    <Content Include="Images\Banner.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -170,7 +171,6 @@
     <Folder Include="Areas\CMS\Controllers\" />
     <Folder Include="Areas\CMS\Models\" />
     <Folder Include="Areas\CMS\Views\Shared\" />
-    <Folder Include="Images\" />
     <Folder Include="JavaScripts\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Login\" />
