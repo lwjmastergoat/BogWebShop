@@ -40,11 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DDMF\AutoFac.cs" />
+    <Compile Include="DDMF\Conn.cs" />
+    <Compile Include="DDMF\Mapper.cs" />
     <Compile Include="Factories\ProductFactory.cs" />
     <Compile Include="Models\AuthorTable.cs" />
     <Compile Include="Models\CategoryTable.cs" />
+    <Compile Include="Models\ContactInformationTable.cs" />
+    <Compile Include="Models\OrderDetailsTable.cs" />
+    <Compile Include="Models\OrderTable.cs" />
     <Compile Include="Models\ProductsTable.cs" />
+    <Compile Include="Models\UsersTable.cs" />
+    <Compile Include="Models\ZipCodesTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
