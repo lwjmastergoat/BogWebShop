@@ -14,4 +14,17 @@ namespace BogWebShop.Controllers
             return View();
         }
     }
+    public ActionResult _footer()
+    {
+        FooterFactory footerFac = new FooterFactory();
+
+        Footer footer = footerFac.GetAll();
+
+        return PartialView(footer);
+    }
+
+    public ActionResult _header()
+    {
+        return PartialView();
+    }
 }
