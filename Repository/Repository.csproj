@@ -49,6 +49,7 @@
     <Compile Include="Factories\OrderDetailsFactory.cs" />
     <Compile Include="Factories\OrderFactory.cs" />
     <Compile Include="Factories\ProductFactory.cs" />
+    <Compile Include="Models\AdminTable.cs" />
     <Compile Include="Models\AuthorTable.cs" />
     <Compile Include="Models\CategoryTable.cs" />
     <Compile Include="Models\ContactInformationTable.cs" />
