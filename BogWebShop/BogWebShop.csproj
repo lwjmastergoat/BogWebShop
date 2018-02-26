@@ -96,6 +96,7 @@
     <Content Include="Css\CMS\Bootstrap\bootstrap-reboot.min.css" />
     <Content Include="Css\CMS\Bootstrap\bootstrap.css" />
     <Content Include="Css\CMS\Bootstrap\bootstrap.min.css" />
+    <Content Include="Css\CMS\CMSCSSMAIN.css" />
     <Content Include="Css\font-awesome-4.7.0\css\font-awesome.css" />
     <Content Include="Css\font-awesome-4.7.0\css\font-awesome.min.css" />
     <Content Include="Css\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
@@ -115,6 +116,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\CMS\CMSAreaRegistration.cs" />
+    <Compile Include="Areas\CMS\Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -129,6 +131,7 @@
     <Content Include="packages.config" />
     <Content Include="Css\mainstyle.scss" />
     <Content Include="Areas\CMS\Views\web.config" />
+    <Content Include="Areas\CMS\Views\Home\Index.cshtml" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -176,6 +179,7 @@
     <Content Include="Css\CMS\Bootstrap\bootstrap-reboot.min.css.map" />
     <Content Include="Css\CMS\Bootstrap\bootstrap.css.map" />
     <Content Include="Css\CMS\Bootstrap\bootstrap.min.css.map" />
+    <Content Include="Views\Shared\_CMSLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -185,7 +189,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\CMS\Controllers\" />
     <Folder Include="Areas\CMS\Models\" />
     <Folder Include="Areas\CMS\Views\Shared\" />
     <Folder Include="JavaScripts\" />
