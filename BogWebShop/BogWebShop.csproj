@@ -109,6 +109,7 @@
       <DependentUpon>mainstyle.css</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
+    <Content Include="Images\Banner.jpg" />
     <Content Include="Images\CMS\cms1.png" />
     <Content Include="Images\CMS\LOGIN.png" />
     <Content Include="Web.config" />
