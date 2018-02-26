@@ -1,13 +1,28 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="~/Css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Css/mainstyle.min.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
+  <header>
+      <h1 id="companyname">KOD MED BØGER</h1>
+    <nav>
+      <ul>
+        <li><a><i class="fa fa-shopping-basket"></i>Kurv</a></li>
+        <li><a><i class="fa fa-user"></i>Login</a></li>
+      </ul>
+    </nav>
+  </header>
     <div>
         @RenderBody()
     </div>
+    <footer>
+        <p>&copy;Kod med bøger 2018</p>
+    </footer>
 </body>
 </html>
