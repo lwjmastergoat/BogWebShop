@@ -10,6 +10,7 @@ namespace BogWebShop.Controllers
 {
     public class UserController : Controller
     {
+        UsersFactory uf = new UsersFactory();
         // GET: Users
         public ActionResult Index()
         {
@@ -18,12 +19,30 @@ namespace BogWebShop.Controllers
         [HttpPost]
         public ActionResult Index(string email, string password)
         {
-            UsersFactory uf = new UsersFactory();
+            
             UsersTable ut = new UsersTable();
             ut = uf.LogIn(email.Trim(), password.Trim());
+            Session["UserID"] = ut.ID;
             Session["Rolle"] = ut.Role;
             
             return Redirect("/Home/");
+        }
+
+        public ActionResult UserPanel(int id)
+        {
+            
+            return View(uf.Get(id));
+        }
+        public ActionResult EditUser(int id)
+        {
+            
+            return View(uf.Get(id));
+        }
+        [HttpPost]
+        public ActionResult EditUser(UsersTable input)
+        {
+            uf.Update(input);
+            return Redirect("/Users/UserPanel/");
         }
 
     } 
