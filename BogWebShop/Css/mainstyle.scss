@@ -2,6 +2,11 @@ html {
     overflow-y: scroll;
 }
 
+a {
+    text-decoration: none !important;
+    color: initial;
+}
+
 body {
     margin: 0;
     font-size: 16px;

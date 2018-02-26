@@ -11,9 +11,11 @@
         @foreach (ProductsTable pf in Model)
         {
             <div class="col-lg-3">
-                <img src="~/Images/Products/@pf.Image" />
-                <h2>@pf.ProductName</h2>
-                <p>@pf.Description</p>
+                <a href="/Product/Details/@pf.ID">
+                    <img src="~/Images/Products/@pf.Image" />
+                    <h2>@pf.ProductName</h2>
+                    <p>@pf.Description</p>
+                </a>
             </div>
         }
     </div>

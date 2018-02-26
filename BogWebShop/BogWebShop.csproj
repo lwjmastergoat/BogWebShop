@@ -220,6 +220,7 @@
     <Content Include="Css\CMS\Bootstrap\bootstrap.css.map" />
     <Content Include="Css\CMS\Bootstrap\bootstrap.min.css.map" />
     <Content Include="Views\Shared\_CMSLayout.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -234,7 +235,6 @@
     <Folder Include="Areas\CMS\Views\Shared\" />
     <Folder Include="JavaScripts\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Product\" />
     <Folder Include="Views\Users\" />
   </ItemGroup>
   <ItemGroup>
