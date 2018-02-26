@@ -26,5 +26,5 @@ namespace BogWebShop.Controllers
             return Redirect("/Home/");
         }
 
-    }
+    } 
 }

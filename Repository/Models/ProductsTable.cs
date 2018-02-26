@@ -14,6 +14,7 @@ namespace Repository.Models
         public string Language { get; set; }
         public int Stock { get; set; }
         public int Price { get; set; }
+        public string Image { get; set; }
         public string Description { get; set; }
         public string Publisher { get; set; }
         public int AuthorID { get; set; }
