@@ -18,9 +18,6 @@ img {
   max-width: 100%;
   height: auto; }
 
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0; }
-
 header {
   width: 100%;
   position: fixed;
@@ -40,6 +37,9 @@ header::after {
   float: left;
   font-weight: 100; }
 
+.container {
+  padding: 20px; }
+
 nav {
   float: right; }
   nav ul {
@@ -56,30 +56,13 @@ a:hover {
   background-color: #f2f2f2;
   cursor: pointer; }
 
-.container-fluid {
-  width: 100%;
-  padding: 20px; }
-
-.container-fluid::after {
-  clear: both;
-  content: "";
-  display: block; }
-
-.container {
-  max-width: 1280px;
-  margin: 0 auto; }
-
-.container::after {
-  clear: both;
-  content: "";
-  display: block; }
-
-.container-half {
-  width: 50%;
-  float: left; }
-
 i {
   margin-right: 5px; }
+
+.products {
+  display: inline-block;
+  vertical-align: top;
+  width: 180px; }
 
 footer {
   width: 100%;

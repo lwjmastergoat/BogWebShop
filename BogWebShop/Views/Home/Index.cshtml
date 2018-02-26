@@ -1,9 +1,20 @@
-﻿
+﻿@using Repository.Models
+@model List<ProductsTable>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
 <img src="~/Images/Banner.jpg" />
-
-@foreach ()
+<section class="container">
+    <div class="row">
+        @foreach (ProductsTable pf in Model)
+        {
+            <div class="col-lg-3">
+                <img src="~/Images/Products/@pf.Image" />
+                <h2>@pf.ProductName</h2>
+                <p>@pf.Description</p>
+            </div>
+        }
+    </div>
+</section>
