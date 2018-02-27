@@ -1,0 +1,27 @@
+﻿@using Repository.Models
+@model ContactZip
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CMSLayout.cshtml";
+}
+
+<section class="container-fluid">
+    <section class="row">
+        <section class="col-sm-12">
+            <h2>Kontakt information</h2>
+        </section>
+    </section>
+    <section class="row">
+        <section class="col-md-6">
+            <p>@Model.ContactName <br />
+            @Model.ContactAddress <br />
+            @Model.ZipCode @Model.City <br />
+            @Model.ContactPhone <br />
+            @Model.ContactEmail <br />
+            @Model.ContactCVR</p>
+        </section>
+    </section>
+</section>
+
+
+
