@@ -7,14 +7,27 @@
     <link href="~/Css/CMS/Bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/Css/mainstyle.min.css" rel="stylesheet" />
+	<link href="~/Css/Cart.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
+	<script type="text/template" id="Template-cartItem">
+		<li>
+			<span>{{Name}}</span>
+			<input onchange="updateCart({{ID}},this)" type="number" step="1" value="{{Amount}}"/>
+			<button type="button" onclick="removeCart({{ID}})">X</button>
+		</li>
+	</script>
+	@RenderSection("Templates", false);
 </head>
 <body>
   <header>
       <h1 id="companyname">ASPHP.NET</h1>
     <nav>
       <ul>
-        <li><a><i class="fa fa-shopping-basket"></i>Kurv</a></li>
+        <li id="cartHolder">
+			<a><i class="fa fa-shopping-basket"></i>Kurv</a>
+			<ul id="Cart">
+			</ul>
+		</li>
         <li><a><i class="fa fa-user"></i>Login</a></li>
           <li><a href="/Home/Contact/"><i class="fa fa-phone"></i>Kontakt</a></li>
       </ul>
@@ -27,5 +40,6 @@
         <p>&copy;Kod med bøger 2018</p>
     </footer>
     <script src="~/JavaScripts/jquery-3.3.1.min.js"></script>
+	<script src="~/JavaScripts/Cart.js"></script>
 </body>
 </html>
