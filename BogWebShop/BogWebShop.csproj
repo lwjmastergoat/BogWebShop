@@ -222,6 +222,7 @@
     <Content Include="Css\CMS\Bootstrap\bootstrap.min.css.map" />
     <Content Include="Views\Shared\_CMSLayout.cshtml" />
     <Content Include="Views\Product\Details.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
