@@ -71,11 +71,13 @@ i {
 footer {
   width: 100%;
   background-color: black;
-  position: fixed;
-  bottom: 0;
   padding: 5px;
   color: white;
   text-align: center; }
+
+select {
+  display: block !important;
+  float: right !important; }
 
 #contactus {
   max-width: 400px;
