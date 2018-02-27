@@ -14,11 +14,11 @@ namespace BogWebShop.Areas.CMS.Controllers
         // GET: CMS/ContactInfo
         public ActionResult Index()
         {
-            return View(cf.GetAll());
+            return View(cf.GetByJoined());
         }
         public ActionResult EditContactInfo()
         {
-            return View(cf.GetAll());
+            return View(cf.GetByJoined());
         }
         [HttpPost]
         public ActionResult EditContactInfo(ContactInformationTable input)

@@ -17,7 +17,7 @@
             <td>Pris</td>
             <td>Beskrivelse</td>
             <td>Publisher</td>
-            <td><a href="/CMS/Produkt/AddNew"><button class="btn btntilfoej">Tilføj Produkt</button></a></td>
+            <td><a href="/CMS/Product/AddNew"><button class="btn btntilfoej">Tilføj Produkt</button></a></td>
             <td></td>
 
 
@@ -36,14 +36,14 @@
                 <td class="remove">
                     @if ((int)Session["role"] >= 1)
                     {
-                        <a href="/CMS/Produkt/Delete/@item.ID"><button class="btn bredde">Fjern</button></a>
+                        <a href="/CMS/Product/Delete/@item.ID"><button class="btn bredde">Fjern</button></a>
                     }
                 </td>
 
                 <td class="rediger">
                     @if ((int)Session["role"] >= 1)
                     {
-                        <a href="/CMS/Produkt/Edit/@item.ID"><button class="btn btnrediger">Rediger</button></a>
+                        <a href="/CMS/Product/Edit/@item.ID"><button class="btn btnrediger">Rediger</button></a>
                     }
                 </td>
 

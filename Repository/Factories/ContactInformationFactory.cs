@@ -10,5 +10,11 @@ namespace Repository.Factories
 {
     public class ContactInformationFactory : AutoFac<ContactInformationTable>
     {
+        public ContactZip GetByJoined()
+        {
+            string SQL = "SELECT ContactInformationTable.ID, ContactName, ContactAddress, ZipCode, City, ContactEmail, ContactPhone, ContactCVR FROM ContactInformationTable INNER JOIN ZipCodesTable ON ContactZipCode = Zipcode";
+
+            return ExecuteSQL<ContactZip>(SQL)[0];
+        } 
     }
 }
