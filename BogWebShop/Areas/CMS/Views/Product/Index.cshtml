@@ -1,0 +1,53 @@
+﻿@using Repository.Models;
+@model List<ProductsTable>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CMSLayout.cshtml";
+}
+
+<h1>Produkter</h1>
+
+<table>
+    <thead>
+        <tr>
+            <td>Kategori</td>
+            <td>Navn</td>
+            <td>Sprog</td>
+            <td>Pris</td>
+            <td>Beskrivelse</td>
+            <td>Publisher</td>
+            <td><a href="/CMS/Produkt/AddNew"><button class="btn btntilfoej">Tilføj Produkt</button></a></td>
+            <td></td>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryID</td>
+                <td>@item.ProductName</td>
+                <td>@item.Language</td>
+                <td>@item.Price</td>
+                <td>@item.Description.Substring(0, 35)</td>
+                <td>@item.Publisher</td>
+                <td class="remove">
+                    @if ((int)Session["role"] >= 1)
+                    {
+                        <a href="/CMS/Produkt/Delete/@item.ID"><button class="btn bredde">Fjern</button></a>
+                    }
+                </td>
+
+                <td class="rediger">
+                    @if ((int)Session["role"] >= 1)
+                    {
+                        <a href="/CMS/Produkt/Edit/@item.ID"><button class="btn btnrediger">Rediger</button></a>
+                    }
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
