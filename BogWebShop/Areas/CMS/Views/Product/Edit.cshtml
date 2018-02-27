@@ -1,0 +1,73 @@
+﻿@using BogWebShop.ViewModels;
+@model ProductVM
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_CMSLayout.cshtml";
+}
+
+
+<form method="post" action="/CMS/Product/Edit/" enctype="multipart/form-data">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="headlineh2">Navn</h2>
+
+                <input type="text" name="ProductName" class="" value="@Model.Products.ProductName" />
+                <br />
+                <h2>Beskrivelse</h2>
+
+                <textarea class="textarea" name="Description">@Model.Products.Description</textarea>
+                <h2 class="headlineh2">Kategori</h2>
+
+                <select name="CategoryID">
+                    @foreach (var lol in Model.Category)
+                    {
+                        <option value="@lol.ID" @(Model.Products.CategoryID == lol.ID ? "selected" : null)>@lol.CategoryName</option>
+                    }
+                </select>
+                @*<input type="text" name="KategoriID" class="inputs hdinput" value="@Model.KategoriID" />*@
+                <br />
+                <h2 class="headlineh2">Pris</h2>
+
+                <input type="text" name="Price" class="" value="@Model.Products.Price" />
+                <br />
+                <h2 class="headlineh2">Sprog</h2>
+                <input type="text" name="Language" class="" value="@Model.Products.Language" />
+                <br />
+                <h2 class="headlineh2">Lager Antal</h2>
+                <input type="text" name="Stock" class="" value="@Model.Products.Stock" />
+                <br />
+
+            </div>
+            <div class="col-sm-6">
+
+                <h2 class="headlineh2">Publisher</h2>
+                <input type="text" name="Publisher" class="" value="@Model.Products.Publisher" />
+                <br />
+                <h2 class="headlineh2">AuthorID</h2>
+
+                <input type="text" name="AuthorID" class="" value="@Model.Products.AuthorID" />
+                <br />
+                <h2>New Picture</h2>
+                <input type="file" class="roleselect" name="Photo" />
+                <br />
+                <input type="hidden" value="@Model.Products.ID" name="ID" />
+                <br />
+
+
+                @if (Model.Products.Image != null)
+                {
+                    <h2 class="currentimg"> Current Picture </h2>
+                    <img src="~/Images/Products/@Model.Products.Image" width="300" />
+                    <br />
+
+                }
+                <br />
+                <button type="submit">Rediger Produkt</button>
+            </div>
+
+        </div>
+    </div>
+</form>
+

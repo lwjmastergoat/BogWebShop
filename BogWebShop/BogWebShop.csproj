@@ -175,6 +175,8 @@
     <Content Include="Areas\CMS\Views\web.config" />
     <Content Include="Areas\CMS\Views\Home\Index.cshtml" />
     <Content Include="Areas\CMS\Views\Product\Index.cshtml" />
+    <Content Include="Areas\CMS\Views\Product\AddNew.cshtml" />
+    <Content Include="Areas\CMS\Views\Product\Edit.cshtml" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
