@@ -16,6 +16,11 @@ namespace BogWebShop.Controllers
         {
             return View(pf.GetAll());
         }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
     }
     
 }

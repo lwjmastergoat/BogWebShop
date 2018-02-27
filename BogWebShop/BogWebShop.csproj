@@ -178,6 +178,8 @@
     <Content Include="Areas\CMS\Views\web.config" />
     <Content Include="Areas\CMS\Views\Home\Index.cshtml" />
     <Content Include="Areas\CMS\Views\Product\Index.cshtml" />
+    <Content Include="Areas\CMS\Views\Product\AddNew.cshtml" />
+    <Content Include="Areas\CMS\Views\Product\Edit.cshtml" />
     <Content Include="Areas\CMS\Views\ContactInfo\Index.cshtml" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
@@ -228,6 +230,7 @@
     <Content Include="Css\CMS\Bootstrap\bootstrap.min.css.map" />
     <Content Include="Views\Shared\_CMSLayout.cshtml" />
     <Content Include="Views\Product\Details.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

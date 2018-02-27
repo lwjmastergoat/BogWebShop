@@ -61,7 +61,91 @@ namespace BogWebShop.Areas.CMS.Controllers
 
             pf.Insert(input);
 
-            return Redirect("/CMS/Produkt");
+            return Redirect("/CMS/Product");
         }
+
+
+        public ActionResult Delete(int ID)
+        {
+            if (Session["role"] == null || (int)Session["role"] < Editor)
+            {
+                return Redirect("/CMS/Product");
+            }
+
+
+
+            ProductsTable produkt = pf.Get(ID);
+
+            if (produkt.Image != null)
+            {
+                string imagePath = Request.PhysicalApplicationPath + "/Images/Products/" + produkt.Image;
+
+                if (System.IO.File.Exists(imagePath))
+                {
+                    System.IO.File.Delete(imagePath);
+                }
+            }
+
+            pf.Delete(ID);
+
+            return Redirect("/CMS/Product");
+        }
+
+
+        public ActionResult Edit(int ID)
+        {
+            if (Session["role"] == null || (int)Session["role"] < Editor)
+            {
+                return Redirect("/CMS/Produkt");
+            }
+
+            ProductVM produkt = new ProductVM();
+
+            produkt.Products = pf.Get(ID);
+            produkt.Category = cf.GetAll();
+
+
+
+
+
+            return View(produkt);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(ProductsTable input, HttpPostedFileBase Photo)
+        {
+            if (Session["role"] == null || (int)Session["role"] < Editor)
+            {
+                return Redirect("/CMS/Product");
+            }
+
+
+            input.Image = null;
+
+            if (Photo != null)
+            {
+                ProductsTable produkt = pf.Get(input.ID);
+
+                if (produkt.Image != null)
+                {
+                    string imagePath = Request.PhysicalApplicationPath + "/Images/Products/" + produkt.Image;
+
+                    if (System.IO.File.Exists(imagePath))
+                    {
+                        System.IO.File.Delete(imagePath);
+                    }
+
+                }
+                string newImagePath = Request.PhysicalApplicationPath + "/Images/Products/";
+                input.Image = ft.UploadFile(Photo, newImagePath);
+            }
+
+            pf.Update(input);
+
+
+            return Redirect("/CMS/Product");
+        }
+
     }
+
 }

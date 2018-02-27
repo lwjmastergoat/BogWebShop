@@ -37,6 +37,7 @@
             <br />
             <p class="nb-nav-title">Settings</p>
             <li class="">
+
                 @if ((int)Session["role"] >= 2)
     {
             <a href="/CMS/Admin/">
@@ -47,32 +48,19 @@
 
                 @if ((int)Session["role"] >= 1)
     {
-            <a href="/CMS/Produkt/">
+            <a href="/CMS/Product/">
                 <span class="fa fa-file-text nb-link-icon"></span>
                 <span class="nb-link-text">Produkt</span>
             </a>
 }
                 @if ((int)Session["role"] >= 1)
     {
-            <a href="/CMS/Nyheds/">
-                <span class="fa fa-file-text nb-link-icon"></span>
-                <span class="nb-link-text">Nyheder</span>
-            </a>
-}
-                @if ((int)Session["role"] >= 1)
-    {
-            <a href="/CMS/Kontakt/">
+            <a href="/CMS/ContactInfo/">
                 <span class="fa fa-file-text nb-link-icon"></span>
                 <span class="nb-link-text">Kontakt</span>
             </a>
 }
-                @if ((int)Session["role"] >= 1)
-                {
-                    <a href="/CMS/OmOs/">
-                        <span class="fa fa-file-text nb-link-icon"></span>
-                        <span class="nb-link-text">Om Os</span>
-                    </a>
-                }
+
                 @if ((int)Session["role"] >= 2)
                 {
                     <a href="/CMS/Kunde/">

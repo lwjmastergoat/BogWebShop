@@ -101,3 +101,19 @@ footer {
     color: white;
     text-align: center;
 }
+
+#contactus {
+    max-width: 400px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #d75024;
+    border-radius: 4px;
+    color: white;
+
+    input {
+        display: block;
+        width: 80%;
+    }
+}
