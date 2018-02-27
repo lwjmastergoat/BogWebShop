@@ -27,6 +27,15 @@ namespace BogWebShop.Controllers
             
             return Redirect("/Home/");
         }
+        public ActionResult LogOut()
+        {
+
+
+            Session.Remove("UserID");
+            Session.Remove("Rolle");
+
+            return Redirect("/Home/");
+        }
 
         public ActionResult UserPanel(int id)
         {

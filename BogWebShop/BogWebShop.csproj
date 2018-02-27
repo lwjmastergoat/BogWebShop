@@ -155,8 +155,11 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\CMS\CMSAreaRegistration.cs" />
+    <Compile Include="Areas\CMS\Controllers\ContactInfoController.cs" />
     <Compile Include="Areas\CMS\Controllers\HomeController.cs" />
+    <Compile Include="Areas\CMS\Controllers\OrderController.cs" />
     <Compile Include="Areas\CMS\Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -226,6 +229,7 @@
     <Content Include="Css\CMS\Bootstrap\bootstrap.min.css.map" />
     <Content Include="Views\Shared\_CMSLayout.cshtml" />
     <Content Include="Views\Product\Details.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -236,8 +240,12 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\CMS\Models\" />
+    <Folder Include="Areas\CMS\Views\ContactInfo\" />
+    <Folder Include="Areas\CMS\Views\Order\" />
+    <Folder Include="Areas\CMS\Views\Product\" />
     <Folder Include="Areas\CMS\Views\Shared\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Contact\" />
     <Folder Include="Views\Users\" />
   </ItemGroup>
   <ItemGroup>
