@@ -10,8 +10,6 @@ namespace BogWebShop.Helpers
 {
     public class FileTools
     {
-        public class FileTool
-        {
             public string UploadFile(HttpPostedFileBase fil, string outputPath)
             {
                 string fileName = Path.GetFileName(fil.FileName);
@@ -30,9 +28,6 @@ namespace BogWebShop.Helpers
                 {
                     return null;
                 }
-
-
-            }
 
         }
     }
