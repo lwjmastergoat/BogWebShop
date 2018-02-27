@@ -1,0 +1,33 @@
+﻿@using Repository.Models;
+@model ContactInformationTable
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_CMSLayout.cshtml";
+}
+
+<section class="container-fluid">
+
+    <section class="row">
+        <section class="col-sm-12"><h2>Rediger kontact information</h2></section>
+    </section>
+    <section class="row">
+        <form id="contactForm" class="col-sm-12" method="post" action="/CMS/ContactInfo/Edit">
+            <label>Firma navn</label><br />
+            <input type="text" name="ContactName" value="@Model.ContactName" /><br />
+            <label>Adresse</label><br />
+            <input type="text" name="CantoctAddress" value="@Model.ContactAddress" /><br />
+            <label>Post nummer</label><br />
+            <input type="number" name="ContactZipCode" value="@Model.ContactZipCode" /><br />
+            <label>Telefon nummer</label><br />
+            <input type="number" name="ContactPhone" value="@Model.ContactPhone" /><br />
+            <label>Email</label><br />
+            <input type="text" name="ContactEmail" value="@Model.ContactEmail" /><br />
+            <label>CVR</label><br />
+            <input type="number" name="ContactEmail" value="@Model.ContactEmail" /><br /><br />
+            <input type="hidden" name="ID" value="@Model.ID" />
+            <button type="submit">Opdater</button>
+
+        </form>
+    </section>
+    
+</section>

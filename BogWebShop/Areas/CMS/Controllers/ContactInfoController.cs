@@ -16,12 +16,12 @@ namespace BogWebShop.Areas.CMS.Controllers
         {
             return View(cf.GetByJoined());
         }
-        public ActionResult EditContactInfo()
+        public ActionResult Edit()
         {
-            return View(cf.GetByJoined());
+            return View(cf.GetAll()[0]);
         }
         [HttpPost]
-        public ActionResult EditContactInfo(ContactInformationTable input)
+        public ActionResult Edit(ContactInformationTable input)
         {
             cf.Update(input);
             return Redirect("/CMS/ContactInfo/");

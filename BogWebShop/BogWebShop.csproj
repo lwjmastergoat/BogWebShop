@@ -96,6 +96,7 @@
     <Content Include="Css\CMS\Bootstrap\bootstrap-reboot.min.css" />
     <Content Include="Css\CMS\Bootstrap\bootstrap.css" />
     <Content Include="Css\CMS\Bootstrap\bootstrap.min.css" />
+    <Content Include="Css\CMS\CMSContactCSS.css" />
     <Content Include="Css\CMS\CMSCSSMAIN.css" />
     <Content Include="Css\font-awesome-4.7.0\css\font-awesome.css" />
     <Content Include="Css\font-awesome-4.7.0\css\font-awesome.min.css" />
@@ -181,6 +182,7 @@
     <Content Include="Areas\CMS\Views\Product\AddNew.cshtml" />
     <Content Include="Areas\CMS\Views\Product\Edit.cshtml" />
     <Content Include="Areas\CMS\Views\ContactInfo\Index.cshtml" />
+    <Content Include="Areas\CMS\Views\ContactInfo\Edit.cshtml" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
