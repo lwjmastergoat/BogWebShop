@@ -11,4 +11,5 @@ namespace Repository.Factories
     public class ProductFactory : AutoFac<ProductsTable>
     {
     }
+
 }

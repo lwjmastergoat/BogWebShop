@@ -14,7 +14,7 @@
                 <a href="/Product/Details/@pf.ID">
                     <img src="~/Images/Products/@pf.Image" />
                     <h2>@pf.ProductName</h2>
-                    <p>@pf.Description</p>
+                    <p>@pf.Description.Substring(0, 150)</p>
                 </a>
             </div>
         }
