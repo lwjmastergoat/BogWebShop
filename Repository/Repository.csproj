@@ -60,6 +60,7 @@
     <Compile Include="Models\OrderTable.cs" />
     <Compile Include="Models\ProductsTable.cs" />
     <Compile Include="Models\R_Models\ContactZip.cs" />
+    <Compile Include="Models\R_Models\OrderUsers.cs" />
     <Compile Include="Models\UsersTable.cs" />
     <Compile Include="Models\ZipCodesTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

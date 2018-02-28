@@ -1,0 +1,37 @@
+﻿@using Repository.Models
+@model List<OrderUsers>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CMSLayout.cshtml";
+}
+
+<h1>Ordre</h1>
+<table>
+    <thead>
+        <tr>
+            <td>Navn</td>
+            <td>Email</td>
+            <td>Adresse</td>
+            <td>Post nr</td>
+            <td>By</td>
+            <td>Dato</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (OrderUsers ou in Model)
+        {
+            <tr>
+                <td>@ou.Name</td>
+                <td>@ou.Email</td>
+                <td>@ou.Address</td>
+                <td>@ou.ZipCode</td>
+                <td>@ou.City</td>
+                <td>@ou.Date</td>
+                <td><a href="/CMS/Order/Details/@ou.ID"><button class="btn">Detaljer</button></a></td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
+
