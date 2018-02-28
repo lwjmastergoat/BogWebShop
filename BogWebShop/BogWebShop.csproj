@@ -104,7 +104,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Css\Cart.css" />
     <Content Include="Css\CMS\Bootstrap\bootstrap-grid.css" />
     <Content Include="Css\CMS\Bootstrap\bootstrap-grid.min.css" />
     <Content Include="Css\CMS\Bootstrap\bootstrap-reboot.css" />

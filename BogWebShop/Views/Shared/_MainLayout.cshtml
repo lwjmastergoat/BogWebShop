@@ -10,17 +10,17 @@
 	<link href="~/Css/Cart.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
 	<script type="text/template" id="Template-cartItem">
-		<div class="row">
-			<span class="col-md-6">{{Name}}</span>
+		<div class="cartContent">
+			<span>{{Name}}</span>
 			<input onchange="updateCart({{ID}},this)" type="number" step="1" value="{{Amount}}"/>
 			<span class="price">{{Price}}kr.</span>
 			<button type="button" onclick="removeCart({{ID}})">X</button>
 		</div>
 	</script>
 	<script type="text/template" id="Template-TotalPrice">
-		<div class="row">
-			<span class="col-md-6"><a>Køb nu</a></span>
-			<span class="col-md-6" id="totalPrice">Total Price {{Total}}kr.</span>
+		<div>
+            <span id="totalPrice">I alt: {{Total}}kr.</span>
+			<a>Køb nu</a>
 		</div>
 	</script>
 	@RenderSection("Templates", false)
