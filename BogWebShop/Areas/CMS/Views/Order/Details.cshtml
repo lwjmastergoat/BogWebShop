@@ -23,16 +23,28 @@
         </tr>
     </thead>
     <tbody>
+        @{
+            int total = 0;
+        }
         @foreach (var details in Model)
         {
+            total += details.Price * details.Quantity;
+
             <tr>
                 <td> @details.ProductName</td>
                 <td> @details.Price</td>
                 <td> @details.Quantity</td>
             </tr>
         }
+        
     </tbody>
     <tfoot>
+        <tr>
+            <td></td>
+            <td> Total Pris: </td>
+            <td> @total DKK</td>
+            
 
+        </tr>
     </tfoot>
 </table>

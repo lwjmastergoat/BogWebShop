@@ -164,9 +164,11 @@
     <Content Include="Images\Products\8s.JPG" />
     <Content Include="Images\Products\9l.JPG" />
     <Content Include="Images\Products\9s.JPG" />
+    <Content Include="JavaScripts\INDEXCHART2.js" />
     <Content Include="JavaScripts\indexcharts.js" />
     <Content Include="JavaScripts\jquery-3.3.1.min.js" />
     <Content Include="JavaScripts\Cart.js" />
+    <Content Include="JavaScripts\piechart.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
