@@ -13,7 +13,7 @@ namespace Repository.Factories
     {
         public UsersTable LogIn(string Email, string Password)
         {
-            string SQL = "SELECT * FROM Users WHERE Email=@Email AND Password=@Password";
+            string SQL = "SELECT * FROM UsersTable WHERE Email=@Email AND Password=@Password";
 
             using (var cmd = new SqlCommand(SQL, Conn.CreateConnection()))
             {
