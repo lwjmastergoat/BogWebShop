@@ -11,14 +11,14 @@ namespace Repository.Factories
 {
     public class UsersFactory : AutoFac<UsersTable>
     {
-        public UsersTable LogIn(string email, string password)
+        public UsersTable LogIn(string Email, string Password)
         {
-            string SQL = "SELECT * FROM Users WHERE Email=@Email AND password=@password";
+            string SQL = "SELECT * FROM Users WHERE Email=@Email AND Password=@Password";
 
             using (var cmd = new SqlCommand(SQL, Conn.CreateConnection()))
             {
-                cmd.Parameters.AddWithValue("@Email", email);
-                cmd.Parameters.AddWithValue("@password", password);
+                cmd.Parameters.AddWithValue("@Email", Email);
+                cmd.Parameters.AddWithValue("@Password", Password);
 
                 var mapper = new Mapper<UsersTable>();
                 var r = cmd.ExecuteReader();

@@ -126,10 +126,61 @@ select {
     border-radius: 100%;
     text-align: center;
     border: 0;
-    width: 20px;
-    height: 20px;
-    top: 8px;
-    right: 5px;
+    width: 23px;
+    height: 23px;
+    top: 3px;
+    right: 3px;
     background-color: red;
     color: white;
 }
+
+
+#cartHolder {
+	position: relative;
+}
+	#cartHolder:not(:hover) #Cart{
+		display: none;
+	}
+	#cartHolder #Cart {
+		background-color: white;
+		width: 300px;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%,0);
+		border-top: none;
+		padding: 10px;
+	}
+		#cartHolder #Cart div {
+			position: relative;
+		}
+			#cartHolder #Cart div span.price {
+				padding-left: 20px;
+			}
+			#cartHolder #Cart div:not(:hover) button {
+				display: none;
+			}
+			#cartHolder #Cart div button {
+				position: absolute;
+				top: 0;
+				right:0;
+				transform: translate(-50%,0);
+				height: 100%;
+                border: 0;
+                margin-top: 25px;
+                height: 25px;
+                width: 25px;
+                border-radius: 100%;
+				background: red;
+                color: white;
+			}
+			#cartHolder #Cart div a {
+                display: table;
+                margin: 0 auto;
+				width: auto;
+				height: auto;
+				padding: 5px;
+				border: #ddd 1px solid;
+                user-select: none;
+                cursor: pointer;
+			}

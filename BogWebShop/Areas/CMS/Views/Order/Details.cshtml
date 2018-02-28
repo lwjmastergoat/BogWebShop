@@ -1,0 +1,38 @@
+﻿@using Repository.Models;
+@model List<OrderDetailsRela>
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_CMSLayout.cshtml";
+}
+
+<h1> Ordre Detaljer </h1>
+
+<table>
+    <thead>
+        <tr>
+            <td>
+                 Produkt Navn 
+            </td>
+            <td>
+                Pris
+            </td>
+            <td>
+                Antal
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var details in Model)
+        {
+            <tr>
+                <td> @details.ProductName</td>
+                <td> @details.Price</td>
+                <td> @details.Quantity</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+
+    </tfoot>
+</table>

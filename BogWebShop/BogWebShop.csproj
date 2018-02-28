@@ -104,7 +104,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Css\Cart.css" />
     <Content Include="Css\CMS\Bootstrap\bootstrap-grid.css" />
     <Content Include="Css\CMS\Bootstrap\bootstrap-grid.min.css" />
     <Content Include="Css\CMS\Bootstrap\bootstrap-reboot.css" />
@@ -190,6 +189,7 @@
     <Compile Include="Helpers\FileTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AuthorVM.cs" />
+    <Compile Include="ViewModels\OrderDetailsVM.cs" />
     <Compile Include="ViewModels\ProductVM.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -204,6 +204,7 @@
     <Content Include="Areas\CMS\Views\ContactInfo\Index.cshtml" />
     <Content Include="Areas\CMS\Views\ContactInfo\Edit.cshtml" />
     <Content Include="Areas\CMS\Views\Order\Index.cshtml" />
+    <Content Include="Areas\CMS\Views\Order\Details.cshtml" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
