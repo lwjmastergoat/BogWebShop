@@ -10,5 +10,11 @@ namespace Repository.Factories
 {
     public class OrderDetailsFactory : AutoFac<OrderDetailsTable>
     {
+        public List<OrderDetailsRela> GetByOrderID(int id)
+        {
+            string SQL = "SELECT OrderDetailsTable.ID, ProductName, Price, Quantity FROM OrderDetailsTable INNER JOIN ProductsTable ON ProductsID = ProductsTable.ID Where OrderID = '" + id +"'";
+
+            return ExecuteSQL<OrderDetailsRela>(SQL);
+        }
     }
 }
