@@ -13,7 +13,6 @@ function start() {
 	})
 		.then(Response => Response.json())
 		.then(res => {
-			console.log(res);
 			products = res;
 			viewCart("#Cart");
 			try {
@@ -100,8 +99,10 @@ function clearCart() {
 	localStorage.setItem("cart", null);
 	viewCart("#Cart");
 }
-function removeCart(id) {
+function removeCart(id, elm) {
 	if (Number(id)) {
+		var del = elm.parentNode;
+		del.parentNode.removeChild(del);
 		delete cart[id];
 
 		localStorage.setItem("cart", JSON.stringify(cart));
