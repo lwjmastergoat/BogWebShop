@@ -53,6 +53,16 @@ namespace BogWebShop.Controllers
             uf.Update(input);
             return Redirect("/Users/UserPanel/");
         }
+        public ActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddNew(UsersTable input)
+        {
+            uf.Insert(input);
+            return Redirect("/Users/");
+        }
 
     } 
 }
