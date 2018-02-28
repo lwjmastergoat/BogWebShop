@@ -4,8 +4,42 @@
     Layout = "~/Views/Shared/_CMSLayout.cshtml";
 }
 
-<canvas id="myChart"></canvas>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2> Salg / måned </h2>
+
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="col-sm-6">
+            <h2> Visninger </h2>
+
+            <canvas id="myChart2"></canvas>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+
+        </div>
+        <div class="col-sm-6">
+            <h2>Kønsfordeling</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-7 fisk">
+        </div>
+        <div class="col-sm-3">
+            <canvas id="myChart3"></canvas>
+        </div>
+    </div>
+</div>
+
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <script src="~/JavaScripts/indexcharts.js"></script>
+<script src="~/JavaScripts/INDEXCHART2.js"></script>
+<script src="~/JavaScripts/piechart.js"></script>

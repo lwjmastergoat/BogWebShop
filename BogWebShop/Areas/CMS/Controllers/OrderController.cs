@@ -27,7 +27,6 @@ namespace BogWebShop.Areas.CMS.Controllers
         public ActionResult Details(int ID)
         {
 
-            
 
             
             return View(odf.GetByOrderID(ID));
