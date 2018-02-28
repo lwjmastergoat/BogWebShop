@@ -254,6 +254,7 @@
     <Content Include="Views\Shared\_CMSLayout.cshtml" />
     <Content Include="Views\Product\Details.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
