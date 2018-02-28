@@ -4,11 +4,14 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<form action="/User/Index" method="post">
-    <label>Email</label>
-    <input type="text" name="email" />
-    <label>Password</label>
-    <input type="text" name="password" />
-    <button type="submit">Log ind</button>
-</form>
+<div class="loginbox">
+    <h2 class="tex">Login</h2>
 
+    <form class="login" method="post">
+        <label for="Username">Brugernavn</label><br />
+        <input type="text" name="Username" id="Username" /><br />
+        <label for="Password">Adgangskode</label><br />
+        <input type="password" name="Password" id="Password" /><br />
+        <button type="submit">Login</button>
+    </form>
+</div>

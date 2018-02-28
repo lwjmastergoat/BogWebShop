@@ -7,6 +7,11 @@ a {
     color: initial;
 }
 
+a:hover {
+    color: initial;
+    background-color: #f2f2f2;
+}
+
 body {
     margin: 0;
     font-size: 16px;
@@ -48,7 +53,7 @@ header::after {
 }
 
 #companyname {
-    margin: 10px 0 0 15px;
+    margin: 8px 0 0 15px;
     float: left;
     font-weight: 100;
 }
@@ -76,20 +81,16 @@ nav {
     }
 }
 
-a:hover {
-    background-color: #f2f2f2;
-    cursor: pointer;
-}
+.products {
+    margin-bottom: 20px;
 
+    img {
+        margin-bottom: 10px;
+    }
+}
 
 i {
     margin-right: 5px;
-}
-
-.products {
-    display: inline-block;
-    vertical-align: top;
-    width: 180px;
 }
 
 footer {
@@ -106,19 +107,24 @@ select {
 }
 
 #contactus {
-    max-width: 400px;
+    max-width: 500px;
     margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    background-color: #d75024;
+      background-color: #f2f2f2;
+    border: 1px solid #f00;
     border-radius: 4px;
-    color: white;
+    color: black;
 
     input {
         display: block;
         width: 80%;
     }
+            textarea {
+            display: block;
+            width: 100%;
+        }
 }
 
 #counter {
@@ -136,51 +142,91 @@ select {
 
 
 #cartHolder {
-	position: relative;
+    position: relative;
 }
-	#cartHolder:not(:hover) #Cart{
-		display: none;
-	}
-	#cartHolder #Cart {
-		background-color: white;
-		width: 300px;
-		position: absolute;
-		top: 100%;
-		left: 50%;
-		transform: translate(-50%,0);
-		border-top: none;
-		padding: 10px;
-	}
-		#cartHolder #Cart div {
-			position: relative;
-		}
-			#cartHolder #Cart div span.price {
-				padding-left: 20px;
-			}
-			#cartHolder #Cart div:not(:hover) button {
-				display: none;
-			}
-			#cartHolder #Cart div button {
-				position: absolute;
-				top: 0;
-				right:0;
-				transform: translate(-50%,0);
-				height: 100%;
-                border: 0;
-                margin-top: 25px;
-                height: 25px;
-                width: 25px;
-                border-radius: 100%;
-				background: red;
-                color: white;
-			}
-			#cartHolder #Cart div a {
-                display: table;
-                margin: 0 auto;
-				width: auto;
-				height: auto;
-				padding: 5px;
-				border: #ddd 1px solid;
-                user-select: none;
-                cursor: pointer;
-			}
+
+#cartHolder:not(:hover) #Cart {
+    display: none;
+}
+
+#cartHolder #Cart {
+    background-color: white;
+    width: 300px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,0);
+    border-top: none;
+    padding: 10px;
+}
+
+#cartHolder #Cart div {
+    position: relative;
+}
+
+#cartHolder #Cart div span.price {
+    padding-left: 20px;
+}
+
+#cartHolder #Cart div:not(:hover) button {
+    display: none;
+}
+
+#cartHolder #Cart div button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-50%,0);
+    height: 100%;
+    border: 0;
+    margin-top: 25px;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    background: red;
+    color: white;
+}
+
+#cartHolder #Cart div a {
+    display: table;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    border: #ddd 1px solid;
+    user-select: none;
+    cursor: pointer;
+}
+
+.loginbox {
+    max-width: 300px;
+    display: block;
+    background-color: #f2f2f2;
+    border: 1px solid #f00;
+    color: black;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.loginbox input {
+    width: 100%;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.loginbox button {
+    color: black;
+}
+
+.loginbox label {
+    font-weight: 100;
+}
+
+.loginbox h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
