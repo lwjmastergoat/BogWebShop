@@ -60,6 +60,7 @@ namespace BogWebShop.Controllers
         [HttpPost]
         public ActionResult AddNew(UsersTable input)
         {
+            input.Role = 1;
             uf.Insert(input);
             return Redirect("/Users/");
         }
