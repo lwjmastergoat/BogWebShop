@@ -19,6 +19,8 @@ namespace BogWebShop.Areas.CMS.Controllers
         // GET: CMS/Order
         public ActionResult Index()
         {
+
+
             return View(ofac.GetAllJoined());
         }
 
