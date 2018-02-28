@@ -27,14 +27,10 @@ namespace BogWebShop.Areas.CMS.Controllers
         public ActionResult Details(int ID)
         {
 
-            OrderDetailsVM deta = new OrderDetailsVM();
-
-            deta.products = pf.Get(deta.details.ProductsID);
-            deta.orders = of.Get(ID);
-            deta.details = odf.Get(deta.orders.ID);
+            
 
             
-            return View(deta);
+            return View(odf.GetByOrderID(ID));
         }
     }
 }
