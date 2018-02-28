@@ -5,6 +5,13 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
+
+<div class="container">
+    <div class="col-lg-6">
+        <h2>@Model.ProductName</h2>
+        <p>@Model.Description</p>
+    </div>
+</div>
 <h2>@Model.ProductName</h2>
 <button type="button" onclick="addCart(@Model.ID)">Tilføj til kurv</button>
 

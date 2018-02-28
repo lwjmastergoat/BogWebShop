@@ -38,14 +38,6 @@
             <p class="nb-nav-title">Settings</p>
             <li class="">
 
-                @if ((int)Session["role"] >= 2)
-    {
-            <a href="/CMS/Admin/">
-                <span class="fa fa-user nb-link-icon"></span>
-                <span class="nb-link-text">Admin</span>
-            </a>
-}
-
                 @if ((int)Session["role"] >= 1)
     {
             <a href="/CMS/Product/">
@@ -63,9 +55,9 @@
 
                 @if ((int)Session["role"] >= 2)
                 {
-                    <a href="/CMS/Kunde/">
+                    <a href="/CMS/Order/">
                         <span class="fa fa-file-text nb-link-icon"></span>
-                        <span class="nb-link-text">Kunder</span>
+                        <span class="nb-link-text">Ordre</span>
                     </a>
                 }
 
