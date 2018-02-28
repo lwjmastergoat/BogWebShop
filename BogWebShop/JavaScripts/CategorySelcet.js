@@ -9,13 +9,28 @@ function start() {
 	})
 		.then(Response => Response.json())
 		.then(res => {
-			console.log(res);
 			categorys = res;
+			MakeSelcet();
 		});
 };
 function MakeSelcet() {
-	for (var i in category) {
+	var html = "";
+	for (var i in categorys) {
 		var category = categorys[i];
-		"<option value=" + category.ID + ">" + category.CategoryName + "</option>";
+		html += "<option value=" + category.ID + ">" + category.CategoryName + "</option>";
 	}
+	document.getElementsByName("CategorySelect")[0].innerHTML += html;
+	document.getElementsByName("CategorySelect")[0].addEventListener("change", function (e) {
+		var val = e.target.value;
+		var prod = document.querySelectorAll("div.products")
+		for (var i in products) {
+			var product = prod[i];
+			var pVal = product.getAttribute("data-category");
+			if (pVal == val || val == "*") {
+				product.style.display = "block";
+			} else {
+				product.style.display = "none";
+			}
+		}
+	});
 }

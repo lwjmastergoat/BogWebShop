@@ -9,9 +9,8 @@
 <section class="container">
     <div class="row">
         <h2 class="col-lg-11">Velkommen til læs webudvikling</h2>
-            <select>
-                <option>Front-end</option>
-                <option>Back-end</option>
+            <select name="CategorySelect">
+                <option value="*">ALLE</option>
             </select>
     </div>
 </section>
@@ -19,7 +18,7 @@
     <div class="row">
         @foreach (ProductsTable pf in Model)
         {
-            <div class="col-lg-4 col-md-4 products">
+            <div class="col-lg-4 col-md-4 products" data-Category="@pf.CategoryID">
                 <a href="/Product/Details/@pf.ID">
                     <img src="~/Images/Products/@pf.Image" />
                     <h2>@pf.ProductName</h2>
@@ -30,3 +29,4 @@
         }
     </div>
 </section>
+<script src="~/JavaScripts/CategorySelcet.js"></script>

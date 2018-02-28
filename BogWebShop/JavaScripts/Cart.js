@@ -13,7 +13,6 @@ function start() {
 	})
 		.then(Response => Response.json())
 		.then(res => {
-			console.log(res);
 			products = res;
 			viewCart("#Cart");
 			try {
