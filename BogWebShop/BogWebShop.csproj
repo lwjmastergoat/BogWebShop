@@ -202,6 +202,7 @@
     <Content Include="Areas\CMS\Views\Product\Edit.cshtml" />
     <Content Include="Areas\CMS\Views\ContactInfo\Index.cshtml" />
     <Content Include="Areas\CMS\Views\ContactInfo\Edit.cshtml" />
+    <Content Include="Areas\CMS\Views\Order\Index.cshtml" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -262,7 +263,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\CMS\Models\" />
-    <Folder Include="Areas\CMS\Views\Order\" />
     <Folder Include="Areas\CMS\Views\Shared\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Contact\" />
