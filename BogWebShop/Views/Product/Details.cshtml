@@ -1,10 +1,21 @@
-﻿@using Repository.Models
-@model ProductsTable
+﻿@using BogWebShop.ViewModels;
+@model AuthorVM
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<h2>@Model.ProductName</h2>
-<button type="button" onclick="addCart(@Model.ID)">Tilføj til kurv</button>
 
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>@Model.Products.ProductName</h2>
+            <p>af: @Model.Authors.Name</p>
+            <p>@Model.Products.Description</p>
+        </div>
+        <div class="col-lg-6">
+            <img src="~/Images/Products/@Model.Products.Image" />
+            <button type="button" onclick="addCart(@Model.Products.ID)">Tilføj til kurv</button>
+        </div>
+    </div>
+</div>

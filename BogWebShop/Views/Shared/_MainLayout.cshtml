@@ -23,17 +23,20 @@
 			<span class="col-md-6">Total Price {{Total}}kr.</span>
 		</div>
 	</script>
-	@RenderSection("Templates", false);
+	@RenderSection("Templates", false)
 </head>
 <body>
   <header>
       <h1 id="companyname">ASPHP.NET</h1>
     <nav>
       <ul>
+          <li><a href="/Home/Index"><i class="fa fa-home"></i>Forside</a></li>
         <li id="cartHolder">
-			<a><i class="fa fa-shopping-basket"></i>Kurv</a>
-			<div id="Cart" class="container">
-			</div>
+			<a class="cartbutton position-relative">
+                <span id="counter" onchange="updateCart({{ID}},this)" type="number" step="1" value="{{Amount}}"> </span>
+            <i class="fa fa-shopping-basket"></i>Kurv</a>
+			<ul id="Cart">
+			</ul>
 		</li>
         <li><a><i class="fa fa-user"></i>Login</a></li>
           <li><a href="/Home/Contact/"><i class="fa fa-phone"></i>Kontakt</a></li>
@@ -43,9 +46,9 @@
     <div id="wrapper">
         @RenderBody()
     </div>
-    <footer>
+    @*<footer>
         <p>&copy;Kod med bøger 2018</p>
-    </footer>
+    </footer>*@
     <script src="~/JavaScripts/jquery-3.3.1.min.js"></script>
 	<script src="~/JavaScripts/Cart.js"></script>
 </body>
