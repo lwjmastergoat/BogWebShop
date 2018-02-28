@@ -16,6 +16,10 @@ function start() {
 			console.log(res);
 			products = res;
 			viewCart("#Cart");
+			try {
+				start2()
+			} catch (e) {
+			}
 		});
 };
 function getProduct(id) {
@@ -26,7 +30,7 @@ function getProduct(id) {
 	}
 }
 
-function viewCart(selector) {
+function viewCart(selector,totalPrice) {
 	var html = "";
 	var totalPrice = 0;
 	var totalCount = 0;
@@ -43,7 +47,12 @@ function viewCart(selector) {
 		}else
 			delete cart[id];
 	}
-	document.querySelector("#counter").innerHTML = totalCount;
+	if (totalCount > 0) {
+		document.querySelector("#counter").style.display = "block";
+		document.querySelector("#counter").innerHTML = totalCount;
+	} else {
+		document.querySelector("#counter").style.display = "none";
+	}
 	html += TotalPrice
 		.replace(/{{Total}}/g, totalPrice)
 	document.querySelector(selector).innerHTML = html;
@@ -79,10 +88,13 @@ function updateCart(id, elm) {
 		else
 			delete cart[id];
 	}
-	document.querySelector("#counter").innerHTML = totalCount;
-	document.querySelector("#totalPrice").innerHTML = "Total Price "+totalPrice+"kr.";
-
-
+	if (totalCount > 0) {
+		document.querySelector("#counter").style.display = "block";
+		document.querySelector("#counter").innerHTML = totalCount;
+		document.querySelector("#totalPrice").innerHTML = "Total Price " + totalPrice + "kr.";
+	} else {
+		document.querySelector("#counter").style.display = "none";
+	}
 }
 function clearCart() {
 	localStorage.setItem("cart", null);

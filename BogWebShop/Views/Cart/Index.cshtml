@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@section Templates{
+	<script type="text/template" id="Template-cartItem2">
+		<div class="col-12">
+			<span class="col-md-6">{{Name}}</span>
+			<input onchange="update2({{ID}},this)" type="number" min="1" step="1" value="{{Amount}}" name="amount"/>
+			<span class="price">{{Price}}kr.</span>
+			<button type="button" onclick="removeCart({{ID}})">X</button>
+		</div>
+	</script>
+	<script type="text/template" id="Template-TotalPrice2">
+		<div class="col-12">
+			<span class="col-md-6"><a>Køb nu</a></span>
+			<span class="col-md-6" id="totalPrice2">Total Price {{Total}}kr.</span>
+		</div>
+	</script>
+
+	<script>
+		function start2() {
+			var cartItem2 = document.querySelector("#Template-cartItem2").innerHTML;
+			var TotalPrice2 = document.querySelector("#Template-TotalPrice2").innerHTML;
+			var html = "";
+			var totalPrice = 0;
+			var totalCount = 0;
+			for (var id in cart) {
+				var prod = getProduct(id);
+				if (prod != null) {
+					totalPrice += prod.Price * cart[id];
+					totalCount += Number(cart[id]);
+					html += cartItem2
+						.replace(/{{Name}}/g, prod.ProductName)
+						.replace(/{{ID}}/g, id)
+						.replace(/{{Amount}}/g, cart[id])
+						.replace(/{{Price}}/g, prod.Price);
+				} else
+					delete cart[id];
+			}
+			html += TotalPrice2
+				.replace(/{{Total}}/g, totalPrice)
+			document.querySelector("#CartItems").innerHTML = html;
+
+			
+		}
+		function update2(id, elm) {
+			if (Number(id)) {
+				cart[id] = elm.value;
+
+				localStorage.setItem("cart", JSON.stringify(cart));
+			}
+
+			var totalPrice = 0;
+			for (var id in cart) {
+				var prod = getProduct(id);
+				if (prod != null) {
+					totalPrice += prod.Price * cart[id];
+				}
+				else
+					delete cart[id];
+			}
+			document.querySelector("#totalPrice2").innerHTML = "Total Price " + totalPrice + "kr.";
+			viewCart("#Cart");
+		}
+	</script>
+}
+
+<h2>Index</h2>
+<div class="row" id="CartItems">
+</div>
+<form class="row">
+	<div class="col-12">
+		<input type="hidden" name="Cart" />
+		<button>Betal</button>
+	</div>
+</form>
+

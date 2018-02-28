@@ -12,7 +12,7 @@
 	<script type="text/template" id="Template-cartItem">
 		<div class="cartContent">
 			<span>{{Name}}</span>
-			<input onchange="updateCart({{ID}},this)" type="number" step="1" value="{{Amount}}"/>
+			<input onchange="updateCart({{ID}},this)" min="1" type="number" step="1" value="{{Amount}}"/>
 			<span class="price">{{Price}}kr.</span>
 			<button type="button" onclick="removeCart({{ID}})">X</button>
 		</div>
