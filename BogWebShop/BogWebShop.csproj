@@ -257,6 +257,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
