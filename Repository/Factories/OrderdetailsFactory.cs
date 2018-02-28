@@ -12,7 +12,7 @@ namespace Repository.Factories
     {
         public List<OrderDetailsRela> GetByOrderID(int id)
         {
-            string SQL = "SELECT OrderDetailsTable.ID, OrderID ProductName, Price, Quantity FROM OrderDetailsTable INNER JOIN ProductsTable ON ProductsID = ProductsTable.ID Where OrderID = '" + id +"'";
+            string SQL = "SELECT OrderDetailsTable.ID, OrderID, ProductName, Price, Quantity FROM OrderDetailsTable INNER JOIN ProductsTable ON ProductsID = ProductsTable.ID Where OrderID = '" + id +"'";
 
             return ExecuteSQL<OrderDetailsRela>(SQL);
         }
