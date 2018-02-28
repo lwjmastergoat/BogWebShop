@@ -13,5 +13,10 @@ namespace BogWebShop.Areas.CMS.Controllers
         {
             return View();
         }
+
+        public ActionResult Details()
+        {
+            return View();
+        }
     }
 }
