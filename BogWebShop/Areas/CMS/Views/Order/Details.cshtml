@@ -1,0 +1,12 @@
+﻿@using BogWebShop.ViewModels;
+@model List<OrderDetailsVM>
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_CMSLayout.cshtml";
+}
+
+@foreach (var lort in Model)
+{
+    <p>@lort.products.Price</p>
+}   
