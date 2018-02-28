@@ -1,6 +1,7 @@
 ﻿document.addEventListener("DOMContentLoaded", start);
 //var template = document.querySelector("#Template").innerHTML;
 var CartItem = document.querySelector("#Template-cartItem").innerHTML;
+var TotalPrice = document.querySelector("#Template-TotalPrice").innerHTML;
 var products;
 var cart;
 
@@ -27,17 +28,21 @@ function getProduct(id) {
 
 function viewCart(selector) {
 	var html = "";
+	var totalPrice = 0;
 	for (var id in cart) {
 		var prod = getProduct(id);
-		if(prod != null)
-			html +=
-				CartItem
-					.replace(/{{Name}}/g, prod.ProductName)
-					.replace(/{{ID}}/g, id)
-					.replace(/{{Amount}}/g, cart[id]);
-		else
+		if (prod != null) {
+			totalPrice += prod.Price;
+			html += CartItem
+				.replace(/{{Name}}/g, prod.ProductName)
+				.replace(/{{ID}}/g, id)
+				.replace(/{{Amount}}/g, cart[id])
+				.replace(/{{Price}}/g, prod.Price);
+		}else
 			delete cart[id];
 	}
+	html += TotalPrice
+		.replace(/{{Total}}/g, totalPrice)
 	document.querySelector(selector).innerHTML = html;
 }
 
