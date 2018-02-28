@@ -7,18 +7,24 @@
 
 <section class="container-fluid">
     <section class="row">
-        <section class="col-sm-12">
+        <section class="col-sm-4">
             <h2>Kontakt information</h2>
         </section>
+        
     </section>
     <section class="row">
-        <section class="col-md-6">
-            <p>@Model.ContactName <br />
-            @Model.ContactAddress <br />
-            @Model.ZipCode @Model.City <br />
-            @Model.ContactPhone <br />
-            @Model.ContactEmail <br />
-            @Model.ContactCVR</p>
+        <section class="col-md-3">
+            <p>
+                Firma navn: @Model.ContactName <br />
+                Adresse: @Model.ContactAddress <br />
+                By: @Model.ZipCode @Model.City <br />
+                Telefon nr: @Model.ContactPhone <br />
+                Email: @Model.ContactEmail <br />
+                CVR: @Model.ContactCVR
+            </p>
+        </section>
+        <section class="col-sm-4">
+            <a href="/CMS/ContactInfo/Edit"><button class="btn btnrediger">Rediger</button></a>
         </section>
     </section>
 </section>

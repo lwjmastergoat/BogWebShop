@@ -1,0 +1,27 @@
+﻿body {
+}
+
+#cartHolder {
+	position: relative;
+}
+	#cartHolder:not(:hover) #Cart{
+		display: none;
+	}
+	#cartHolder #Cart {
+		background: #fff;
+		width: 300px;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%,0);
+		border: 1px solid #d75024;
+		border-top: none;
+	}
+		#cartHolder #Cart li {
+			display: flex;
+			width: 100%;
+			padding: 5px;
+		}
+			#cartHolder #Cart li span {
+				flex: auto;
+			}
