@@ -43,7 +43,12 @@
 				.replace(/{{Total}}/g, totalPrice)
 			document.querySelector("#CartItems").innerHTML = html;
 
-			
+			document.Buy.Cart.value = JSON.stringify(cart);
+			document.Buy.addEventListener("submit",function (e) {
+				e.preventDefault();
+				console.log(e);
+				submit()
+			});
 		}
 		function update2(id, elm) {
 			if (Number(id)) {
@@ -63,17 +68,27 @@
 			}
 			document.querySelector("#totalPrice2").innerHTML = "Total Price " + totalPrice + "kr.";
 			viewCart("#Cart");
+			document.Buy.Cart.value = JSON.stringify(cart);
+		}
+		function submit() {
+			start2();
+			if (document.Buy.Cart.value != JSON.stringify(cart)) {
+				console.log("nope");
+			} else {
+				console.log(cart)
+				document.Buy.submit();
+			}
 		}
 	</script>
 }
 
-<h2>Index</h2>
+@ViewBag.msg
 <div class="row" id="CartItems">
 </div>
-<form class="row">
+<form class="row" name="Buy" method="post">
 	<div class="col-12">
 		<input type="hidden" name="Cart" />
-		<button>Betal</button>
+		<button type="submit">Betal</button>
 	</div>
 </form>
 
