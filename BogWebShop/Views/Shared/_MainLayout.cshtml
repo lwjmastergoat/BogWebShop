@@ -20,7 +20,7 @@
 	<script type="text/template" id="Template-TotalPrice">
 		<div class="row">
 			<span class="col-md-6"><a>Køb nu</a></span>
-			<span class="col-md-6">Total Price {{Total}}kr.</span>
+			<span class="col-md-6" id="totalPrice">Total Price {{Total}}kr.</span>
 		</div>
 	</script>
 	@RenderSection("Templates", false)
@@ -33,7 +33,7 @@
           <li><a href="/Home/Index"><i class="fa fa-home"></i>Forside</a></li>
         <li id="cartHolder">
 			<a class="cartbutton position-relative">
-                <span id="counter" onchange="updateCart({{ID}},this)" type="number" step="1" value="{{Amount}}"> </span>
+                <span id="counter"> </span>
             <i class="fa fa-shopping-basket"></i>Kurv</a>
 			<ul id="Cart">
 			</ul>

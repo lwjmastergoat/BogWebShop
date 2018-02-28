@@ -29,10 +29,12 @@ function getProduct(id) {
 function viewCart(selector) {
 	var html = "";
 	var totalPrice = 0;
+	var totalCount = 0;
 	for (var id in cart) {
 		var prod = getProduct(id);
 		if (prod != null) {
-			totalPrice += prod.Price;
+			totalPrice += prod.Price * cart[id];
+			totalCount += Number(cart[id]);
 			html += CartItem
 				.replace(/{{Name}}/g, prod.ProductName)
 				.replace(/{{ID}}/g, id)
@@ -41,6 +43,7 @@ function viewCart(selector) {
 		}else
 			delete cart[id];
 	}
+	document.querySelector("#counter").innerHTML = totalCount;
 	html += TotalPrice
 		.replace(/{{Total}}/g, totalPrice)
 	document.querySelector(selector).innerHTML = html;
@@ -64,7 +67,22 @@ function updateCart(id, elm) {
 
 		localStorage.setItem("cart", JSON.stringify(cart));
 	}
-	viewCart("#Cart");
+
+	var totalPrice = 0;
+	var totalCount = 0;
+	for (var id in cart) {
+		var prod = getProduct(id);
+		if (prod != null) {
+			totalPrice += prod.Price * cart[id];
+			totalCount += Number(cart[id]);
+		}
+		else
+			delete cart[id];
+	}
+	document.querySelector("#counter").innerHTML = totalCount;
+	document.querySelector("#totalPrice").innerHTML = "Total Price "+totalPrice+"kr.";
+
+
 }
 function clearCart() {
 	localStorage.setItem("cart", null);
