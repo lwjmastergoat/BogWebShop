@@ -8,7 +8,7 @@
 <img src="~/Images/Banner.jpg" />
 <section class="container">
     <div class="row">
-        <h2>Velkommen til asphp.dk</h2>
+        <h2 class="col-lg-11">Velkommen til læs webudvikling</h2>
             <select>
                 <option>Front-end</option>
                 <option>Back-end</option>
@@ -19,7 +19,7 @@
     <div class="row">
         @foreach (ProductsTable pf in Model)
         {
-            <div class="col-lg-3">
+            <div class="col-lg-4 col-md-4 products">
                 <a href="/Product/Details/@pf.ID">
                     <img src="~/Images/Products/@pf.Image" />
                     <h2>@pf.ProductName</h2>

@@ -8,6 +8,7 @@
     <link href="~/Css/CMS/Bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="~/Css/CMS/CMSCSSMAIN.css" rel="stylesheet" />
     <link href="~/Css/CMS/CMSContactCSS.css" rel="stylesheet" />
+    <link href="~/Css/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -20,35 +21,35 @@
 
     <!-- Dash Navbar Left -->
     <div class="dash-navbar-left nb-visible">
-        <a class="navbar-brand" href="/CMS">Admin Panel</a>
+        <a class="navbar-brand" href="/CMS">Kontrol panel</a>
 
-        <p class="nb-nav-title">Home</p>
+        <p class="nb-nav-title">Hjem</p>
         <ul class="nb-nav">
             <li>
                 <a href="/CMS">
-                    <span class="fa fa-folder nb-link-icon"></span>
-                    <span class="nb-link-text">CMS Overblik</span>
+                    <span class="fa fa-area-chart nb-link-icon"></span>
+                    <span class="nb-link-text">CMS Oversigt</span>
                 </a>
                 <a href="/Home/Index">
-                    <span class="fa fa-file nb-link-icon"></span>
+                    <span class="fa fa-home nb-link-icon"></span>
                     <span class="nb-link-text">Forside</span>
                 </a>
             </li>
             <br />
-            <p class="nb-nav-title">Settings</p>
+            <p class="nb-nav-title">Indstillinger</p>
             <li class="">
 
                 @if ((int)Session["role"] >= 1)
     {
             <a href="/CMS/Product/">
-                <span class="fa fa-file-text nb-link-icon"></span>
+                <span class="fa fa-book nb-link-icon"></span>
                 <span class="nb-link-text">Produkt</span>
             </a>
 }
                 @if ((int)Session["role"] >= 1)
     {
             <a href="/CMS/ContactInfo/">
-                <span class="fa fa-file-text nb-link-icon"></span>
+                <span class="fa fa-address-book nb-link-icon"></span>
                 <span class="nb-link-text">Kontakt</span>
             </a>
 }
@@ -56,7 +57,7 @@
                 @if ((int)Session["role"] >= 2)
                 {
                     <a href="/CMS/Order/">
-                        <span class="fa fa-file-text nb-link-icon"></span>
+                        <span class="fa fa-shopping-basket nb-link-icon"></span>
                         <span class="nb-link-text">Ordre</span>
                     </a>
                 }
@@ -66,7 +67,7 @@
 
             </li>
             <br />
-            <p class="nb-nav-title">Current User</p>
+            <p class="nb-nav-title">Nuværende bruger</p>
 
             <li>
                 <a href="/Login/Logout">

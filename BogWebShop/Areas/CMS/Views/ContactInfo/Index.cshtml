@@ -5,29 +5,34 @@
     Layout = "~/Views/Shared/_CMSLayout.cshtml";
 }
 
-<section class="container-fluid">
-    <section class="row">
-        <section class="col-sm-4">
-            <h1>Kontakt information</h1>
-        </section>
-        
-    </section>
-    <section class="row">
-        <section class="col-md-3">
-            <p>
-                Firma navn: @Model.ContactName <br />
-                Adresse: @Model.ContactAddress <br />
-                By: @Model.ZipCode @Model.City <br />
-                Telefon nr: @Model.ContactPhone <br />
-                Email: @Model.ContactEmail <br />
-                CVR: @Model.ContactCVR
-            </p>
-        </section>
-        <section class="col-sm-4">
-            <a href="/CMS/ContactInfo/Edit"><button class="btn btnrediger">Rediger</button></a>
-        </section>
-    </section>
-</section>
+<h1>Kontakt information</h1>
+<table>
+    <thead>
+        <tr>
+            <td>Firma Navn</td>
+            <td>Adresse</td>
+            <td>Post nummer</td>
+            <td>By</td>
+            <td>Telefon nr.</td>
+            <td>Email</td>
+            <td>CVR</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.ContactName</td>
+            <td>@Model.ContactAddress</td>
+            <td>@Model.ZipCode</td>
+            <td>@Model.City</td>
+            <td>@Model.ContactPhone</td>
+            <td>@Model.ContactEmail</td>
+            <td>@Model.ContactCVR</td>
+            <td><a href="/CMS/ContactInfo/Edit"><button class="btn btnrediger">Rediger</button></a></td>
+        </tr>
+    </tbody>
+</table>
+
 
 
 
