@@ -177,6 +177,7 @@
     <Compile Include="Areas\CMS\Controllers\OrderController.cs" />
     <Compile Include="Areas\CMS\Controllers\ProductController.cs" />
     <Compile Include="Controllers\APIProductsController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -254,6 +255,7 @@
     <Content Include="Views\Shared\_CMSLayout.cshtml" />
     <Content Include="Views\Product\Details.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
