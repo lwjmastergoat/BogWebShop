@@ -16,15 +16,18 @@
 			<button type="button" onclick="removeCart({{ID}})">X</button>
 		</li>
 	</script>
-	@RenderSection("Templates", false);
+	@RenderSection("Templates", false)
 </head>
 <body>
   <header>
       <h1 id="companyname">ASPHP.NET</h1>
     <nav>
       <ul>
+          <li><a href="/Home/Index"><i class="fa fa-home"></i>Forside</a></li>
         <li id="cartHolder">
-			<a><i class="fa fa-shopping-basket"></i>Kurv</a>
+			<a class="cartbutton position-relative">
+                <span id="counter" onchange="updateCart({{ID}},this)" type="number" step="1" value="{{Amount}}"> </span>
+            <i class="fa fa-shopping-basket"></i>Kurv</a>
 			<ul id="Cart">
 			</ul>
 		</li>
