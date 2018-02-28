@@ -92,3 +92,15 @@ select {
     display: block;
     width: 80%; }
 
+#counter {
+  position: absolute;
+  border-radius: 100%;
+  text-align: center;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  top: 8px;
+  right: 5px;
+  background-color: red;
+  color: white; }
+

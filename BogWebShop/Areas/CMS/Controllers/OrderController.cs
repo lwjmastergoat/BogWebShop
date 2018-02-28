@@ -17,5 +17,10 @@ namespace BogWebShop.Areas.CMS.Controllers
 
             return View(ofac.GetAllJoined());
         }
+
+        public ActionResult Details()
+        {
+            return View();
+        }
     }
 }
