@@ -9,7 +9,7 @@
 			<span class="col-md-6">{{Name}}</span>
 			<input onchange="update2({{ID}},this)" type="number" min="1" step="1" value="{{Amount}}" name="amount"/>
 			<span class="price">{{Price}}kr.</span>
-			<button type="button" onclick="removeCart({{ID}})">X</button>
+			<button type="button" onclick="removeCart2({{ID}},this)">X</button>
 		</div>
 	</script>
 	<script type="text/template" id="Template-TotalPrice2">
@@ -49,6 +49,22 @@
 				console.log(e);
 				submit()
 			});
+		}
+		function removeCart2(id, elm) {
+			removeCart(id, elm);
+
+			var totalPrice = 0;
+			for (var id in cart) {
+				var prod = getProduct(id);
+				if (prod != null) {
+					totalPrice += prod.Price * cart[id];
+				}
+				else
+					delete cart[id];
+			}
+			document.querySelector("#totalPrice2").innerHTML = "Total Price " + totalPrice + "kr.";
+			viewCart("#Cart");
+			document.Buy.Cart.value = JSON.stringify(cart);
 		}
 		function update2(id, elm) {
 			if (Number(id)) {

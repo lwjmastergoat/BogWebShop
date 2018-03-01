@@ -164,6 +164,7 @@
     <Content Include="Images\Products\8s.JPG" />
     <Content Include="Images\Products\9l.JPG" />
     <Content Include="Images\Products\9s.JPG" />
+    <Content Include="JavaScripts\CategorySelcet.js" />
     <Content Include="JavaScripts\INDEXCHART2.js" />
     <Content Include="JavaScripts\indexcharts.js" />
     <Content Include="JavaScripts\jquery-3.3.1.min.js" />
@@ -178,6 +179,7 @@
     <Compile Include="Areas\CMS\Controllers\HomeController.cs" />
     <Compile Include="Areas\CMS\Controllers\OrderController.cs" />
     <Compile Include="Areas\CMS\Controllers\ProductController.cs" />
+    <Compile Include="Controllers\APICategoryController.cs" />
     <Compile Include="Controllers\APIProductsController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
@@ -259,6 +261,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

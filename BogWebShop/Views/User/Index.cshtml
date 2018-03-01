@@ -7,11 +7,12 @@
 <div class="loginbox">
     <h2 class="tex">Login</h2>
 
-    <form class="login" method="post">
+    <form class="login" action="/User/Index" method="post">
         <label for="Email">Email</label><br />
-        <input type="text" name="email" /><br />
+        <input type="text" required name="email" /><br />
         <label for="Password">Adgangskode</label><br />
-        <input type="password" name="password" /><br />
+        <input type="password" required name="password" /><br />
         <button type="submit">Login</button>
+        <a href="/User/Register">Register</a>
     </form>
 </div>
