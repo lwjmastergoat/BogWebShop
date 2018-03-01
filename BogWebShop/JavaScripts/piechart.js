@@ -13,7 +13,7 @@ var chart = new Chart(ctx, {
             'Kvinder'
         ],
         datasets: [{
-            backgroundColor: ['rgb(79, 149, 255)', 'rgb(1, 196, 66)', 'rgb(255, 102, 178)'],
+            backgroundColor: ['rgb(53, 101, 173)', 'rgb(0, 150, 50)', 'rgb(198, 75, 75)'],
             data: [65, 5, 30]
         }],
     },
