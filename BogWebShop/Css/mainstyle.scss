@@ -33,7 +33,8 @@ img {
     height: auto;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h3 {
+    margin-bottom: 0px;
 }
 
 header {
@@ -93,14 +94,6 @@ i {
     margin-right: 5px;
 }
 
-footer {
-    width: 100%;
-    background-color: black;
-    padding: 5px;
-    color: white;
-    text-align: center;
-}
-
 select {
     display: block !important;
     float: right !important;
@@ -108,11 +101,10 @@ select {
 
 #contactus {
     max-width: 500px;
-    margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-      background-color: #f2f2f2;
+    background-color: #f2f2f2;
     border: 1px solid #f00;
     border-radius: 4px;
     color: black;

@@ -8,7 +8,14 @@
 <img src="~/Images/Banner.jpg" />
 <section class="container">
     <div class="row">
-        <h2 class="col-lg-11">Velkommen til læs webudvikling</h2>
+        @if (Session["UserID"] != null)
+        {
+            <h2 class="col-lg-11">Velkommen til læs webudvikling, @Session["Username"]!</h2>
+        }
+        else
+        {
+            <h2 class="col-lg-11">Velkommen til læs webudvikling</h2>
+        }
             <select name="CategorySelect">
                 <option value="*">ALLE</option>
             </select>

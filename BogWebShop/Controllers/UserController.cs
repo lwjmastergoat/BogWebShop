@@ -22,6 +22,9 @@ namespace BogWebShop.Controllers
             
             UsersTable ut = new UsersTable();
             ut = uf.LogIn(email.Trim(), password.Trim());
+            ut.Password = null;
+            Session["user"] = ut;
+            Session["Username"] = ut.Name;
             Session["UserID"] = ut.ID;
             Session["Rolle"] = ut.Role;
             
@@ -30,7 +33,8 @@ namespace BogWebShop.Controllers
         public ActionResult LogOut()
         {
 
-
+            Session.Remove("user");
+            Session.Remove("Username");
             Session.Remove("UserID");
             Session.Remove("Rolle");
 

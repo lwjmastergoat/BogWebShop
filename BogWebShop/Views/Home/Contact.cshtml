@@ -1,18 +1,89 @@
-ï»¿
+@using Repository.Models
 @{
     ViewBag.Title = "Contact";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
+
+    UsersTable user = new UsersTable();
+    if (Session["user"] != null)
+    {
+        user = Session["user"] as UsersTable;
+    }
 }
 
+<div class="container">
+    <h2 class="text-center">Kontakt os</h2>
+    <h3>Fortryder du et køb?</h3><br />
+    <p>
+        <b>Indtast i tekstfeltet:</b> <br />
+        "- Jeg meddeler herved, at jeg ønsker at gøre fortrydelsesretten gældende i forbindelse med
+        min købsaftale om følgende varer (venligst skriv varenummer og varenavn): ........" <br />
+        <b>Bestilt den: (Dato)</b>
+    </p>
     <form id="contactus">
         <label>Navn:</label> <br />
-        <input type="text" /> <br />
+        <input type="text" value="@user.Name" /> <br />
         <label>Email:</label> <br />
-        <input type="text" /> <br />
-        <label>Odrenummer:</label> <br />
-        <input type="text" /> <br />
-        <label>Emne:</label> <br />
+        <input type="email" value="@user.Email" /> <br />
+        <label for="ordrenummer">Ordrenummer: (Valgfrit)</label>
         <input type="text" /> <br />
         <label>Besked:</label> <br />
         <textarea></textarea> <br />
+        <button type="submit">Send</button>
     </form>
+    <br />
+    <hr />
+    <br />
+    <h3 class="text-center">Handelsbetingelser</h3> <br />
+    <p>
+    <b>Betaling:</b> <br />
+    - FIRMANAVN modtager betaling med Dankort/VISA-Dankort, VISA, VISA Electron, Mastercard og JCB. Betaling vil f&oslash;rst blive trukket p&aring; din konto, n&aring;r varen afsendes.<br /></p>
+
+    <p>- Alle bel&oslash;b er i DKK. Danske kroner og er incl. moms.</p>
+
+    <p>- FIRMANAVN bruger en godkendt betalingsserver, der krypterer alle dine kortoplysninger med SSL (Secure Socket Layer) protokol. Det betyder, at man ikke kan afl&aelig;se dine informationer.</p>
+
+    <p>
+        <b>Levering:</b><br />
+        - FIRMANAVN leverer p&aring; alle hverdage, med ordre indg&aring;et inden kl. 12.00
+    </p>
+
+    <p> NOTE: Her skrives jeres egne leveringsformer og betingelser!</p>
+
+    <p>
+        <b>Reklamationsret:</b><br />
+        Der gives 2 års reklamationsret i henhold til købeloven. Vores reklamationsret gælder for fejl i materiale og/eller fabrikation.
+    </p>
+
+    <p> Reklamationen gælder ikke fejl eller skader begået ved forkert betjening af produktet / ydelsen.</p>
+
+    <p> FIRMANAVN vil d&aelig;kke returneringsomkostninger i et rimeligt omfang.</p>
+
+    <p>
+        <b>Ved returnering:</b><br />
+        Rettes henvendelse til og reklamationer sendes til:
+    </p>
+
+    <p>
+        www.læswebudvikling.dk<br />
+        Ydesvej 4b<br />
+        8500 Grenaa
+    </p>
+
+    <p> Der modtages ikke pakker sendt p&aring; efterkrav.</p>
+    <br />
+    <hr />
+    <br />
+    <h3 class="text-center">Lovgivninger</h3> <br />
+    <ul>
+        <li><a href="https://www.retsinformation.dk/Forms/R0710.aspx?id=25854" target="_blank">Ehandelsloven</a></li>
+        <li><a href="https://erhvervsstyrelsen.dk/regler-e-handel" target="_blank">Erhversstyrelsen</a></li>
+        <li><a href="http://e-handelsjura.dk/">Sammenskrevet</a> & <a href="https://sos.systime.dk/index.php?id=300"></a></li>
+        <li><a href="https://www.fdih.dk/" target="_blank">Brancheorganisation</a></li>
+        <li><a href="http://e-handelsjura.dk/e-handelsjura/fortrydelsesret/fortrydelsesret-ved-salg-af-ydelser/digitale-produkter/" target="_blank">Digitalt indhold</a></li>
+        <li><a href="https://www.eugdpr.org/" target="_blank">Persondataforordningen (GDPR) - Gældende fra 25. maj 2018</a></li>
+        <li><a href="https://www.solutio.dk/blog/betalingssystemer-grafik" target="_blank">Guide til betalingssystem</a></li>
+        <li><a href="https://www.emaerket.dk/" target="_blank">E-mærket</a></li>
+        <li><a href="https://www.medialine.dk/blog/handelsbetingelser-webshop.html" target="_blank">Skabalon til handelsbetingelser</a></li>
+        <li><a href="https://www.watery.dk/pages/handelsbetingelser" target="_blank">Eksempel på handelsbetingelser</a></li>
+    </ul>
+</div>

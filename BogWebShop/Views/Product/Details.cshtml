@@ -1,4 +1,4 @@
-﻿@using BogWebShop.ViewModels;
+@using BogWebShop.ViewModels;
 @model AuthorVM
 @{
     ViewBag.Title = "Details";
@@ -10,7 +10,10 @@
     <div class="row">
         <div class="col-lg-6">
             <h2>@Model.Products.ProductName</h2>
-            <p>af: @Model.Authors.Name</p>
+            <p>
+              <b>Skrevet af:</b> @Model.Authors.Name <br />
+              <b>Forlag:</b> @Model.Products.Publisher
+            </p>
             <p>@Model.Products.Description</p>
         </div>
         <div class="col-lg-6">

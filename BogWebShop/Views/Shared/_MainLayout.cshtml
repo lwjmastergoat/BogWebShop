@@ -19,43 +19,43 @@
 	<script type="text/template" id="Template-TotalPrice">
 		<div>
             <span id="totalPrice">I alt: {{Total}}kr.</span>
-			<a href="/Cart/">Køb nu</a>
+			<a href="/Cart/">KÃ¸b nu</a>
 		</div>
 	</script>
 	@RenderSection("Templates", false)
 </head>
 <body>
   <header>
-      <a href="/Home/Index"><h1 id="companyname">Læs webudvikling</h1></a>
+      <a href="/Home/Index"><h1 id="companyname">LÃ¦s webudvikling</h1></a>
     <nav>
       <ul>
           <li><a href="/Home/Index"><i class="fa fa-home"></i>Forside</a></li>
         <li id="cartHolder">
-			<a class="cartbutton position-relative">
-                <span id="counter"> </span>
-            <i class="fa fa-shopping-basket" style="display:none;"></i>Kurv</a>
+            <a class="cartbutton position-relative">
+                <span id="counter"></span>
+                <i class="fa fa-shopping-basket"></i>Kurv
+            </a>
 			<ul id="Cart">
 			</ul>
 		</li>
+          <li><a href="/Home/Contact/"><i class="fa fa-phone"></i>Kontakt</a></li>
           @if (Session["UserID"] != null)
           {
-            <li><a href="/User/Logout"><i class="fa fa-user"></i>Logout</a></li>
+              <li><a href="/User/Logout"><i class="fa fa-user"></i>Logout</a></li>
           }
           else
           {
-            <li><a href="/User/Index"><i class="fa fa-user"></i>Login</a></li>
+              <li><a href="/User/Index"><i class="fa fa-user"></i>Login</a></li>
           }
-
-          <li><a href="/Home/Contact/"><i class="fa fa-phone"></i>Kontakt</a></li>
       </ul>
     </nav>
   </header>
     <div id="wrapper">
         @RenderBody()
     </div>
-    @*<footer>
-        <p>&copy;Kod med bøger 2018</p>
-    </footer>*@
+    <footer>
+
+    </footer>
     <script src="~/JavaScripts/jquery-3.3.1.min.js"></script>
 	<script src="~/JavaScripts/Cart.js"></script>
 </body>
