@@ -5,17 +5,19 @@
 }
 @section Templates{
 	<script type="text/template" id="Template-cartItem2">
-		<div class="col-12">
-			<span class="col-md-6">{{Name}}</span>
-			<input onchange="update2({{ID}},this)" type="number" min="1" step="1" value="{{Amount}}" name="amount"/>
-			<span class="price">{{Price}}kr.</span>
-			<button type="button" onclick="removeCart2({{ID}},this)">X</button>
+		<div class="col-12 row justify-content-center">
+			<span class="col-md-3">{{Name}}</span>
+			<input onchange="update2({{ID}},this)" class="col-md-2" type="number" min="1" step="1" value="{{Amount}}" name="amount"/>
+			<span class="price col-md-2">{{Price}}kr.</span>
+			<div class="col-1">
+				<button type="button" onclick="removeCart2({{ID}},this)">X</button>
+			</div>
 		</div>
 	</script>
 	<script type="text/template" id="Template-TotalPrice2">
-		<div class="col-12">
-			<span class="col-md-6"><a>Køb nu</a></span>
-			<span class="col-md-6" id="totalPrice2">Total Price {{Total}}kr.</span>
+		<div class="col-12 row justify-content-center">
+			<span class="col-md-5">Total Pris</span>
+			<span class="col-md-3" id="totalPrice2">{{Total}}kr.</span>
 		</div>
 	</script>
 
@@ -99,12 +101,14 @@
 }
 
 @ViewBag.msg
-<div class="row" id="CartItems">
-</div>
-<form class="row" name="Buy" method="post">
-	<div class="col-12">
-		<input type="hidden" name="Cart" />
-		<button type="submit">Betal</button>
+<div class="container">
+	<div class="row" id="CartItems">
 	</div>
-</form>
+	<form class="row" name="Buy" method="post">
+		<div class="col-12 row justify-content-center">
+			<input type="hidden" name="Cart" />
+			<button type="submit" class="col-lg-8">Betal</button>
+		</div>
+	</form>
+</div>
 
